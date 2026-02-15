@@ -1,60 +1,65 @@
-# 🏥 AI-Powered Healthcare Advisor (AIHCA)
+# AI-Powered Healthcare Advisor (AIHCA)
 
-An AI-based healthcare advisory system that analyzes user-entered symptoms, predicts possible diseases, provides home remedies, natural suggestions, OTC guidance, and identifies critical conditions requiring immediate medical attention.
+AIHCA is a machine learning-based healthcare assistance system that helps users understand possible diseases based on the symptoms they enter. The system provides preliminary guidance such as home remedies, natural suggestions, OTC medicine recommendations (without dosage), and alerts users in case of critical conditions.
 
----
-
-## 📌 Project Overview
-
-AIHCA is designed to provide accessible, affordable, and preliminary healthcare guidance using Machine Learning and Natural Language Processing.
-
-The system helps users:
-
-- Understand possible diseases based on symptoms  
-- Receive home and natural remedy suggestions  
-- Get safe OTC medication guidance (no dosage provided)  
-- Detect emergency symptoms and recommend immediate doctor consultation  
-
-⚠️ This system does NOT replace professional medical advice.
+This project is developed as part of a B.Tech Computer Science academic project.
 
 ---
 
-## 🎯 Key Features
+## About the Project
 
-- Symptom-to-Disease Prediction  
-- Severity Classification (Normal / Moderate / Critical)  
-- Emergency Override System  
-- Home Remedies & Natural Cure Suggestions  
-- OTC Medicine Recommendations (No Prescription Dosage)  
-- Preventive Healthcare Advice  
-- User-Friendly Web Interface  
+Many people rely on random internet sources when they feel sick, which can lead to confusion, anxiety, and sometimes wrong self-treatment. Hospital visits can also involve long waiting hours and high consultation costs, especially for minor issues.
 
----
+AIHCA is built to act as a first-level healthcare support system. It does not replace a doctor but helps users understand:
 
-## 🧠 System Architecture
+- What disease might be associated with their symptoms  
+- Whether the condition seems normal, moderate, or critical  
+- Basic home and natural remedies  
+- When it is necessary to consult a doctor immediately  
 
-User Input (Symptoms)  
-→ Text Preprocessing  
-→ TF-IDF Vectorization  
-→ Random Forest Classifier  
-→ Severity Detection (Rule-Based)  
-→ Advice Engine  
-→ Output with Disclaimer  
+The system is especially helpful for elderly individuals and people who may not easily access hospitals.
 
 ---
 
-## 🛠️ Tech Stack
+## Main Features
+
+- Symptom-based disease prediction  
+- Severity classification (Normal / Moderate / Critical)  
+- Emergency symptom detection override  
+- Home remedy suggestions  
+- Natural treatment advice  
+- Over-the-counter (OTC) medicine suggestions (no dosage provided)  
+- Clear medical disclaimer  
+
+---
+
+## How the System Works
+
+1. The user enters symptoms in text form.
+2. The system processes and cleans the text.
+3. TF-IDF converts the text into numerical features.
+4. A Random Forest model predicts the most likely disease.
+5. A rule-based module checks for emergency keywords.
+6. The system displays:
+   - Predicted disease  
+   - Severity level  
+   - Remedies and suggestions  
+   - Doctor recommendation if needed  
+
+---
+
+## Technologies Used
 
 - Python  
-- Scikit-learn  
 - Pandas  
 - NumPy  
-- Streamlit (Frontend)  
-- Joblib (Model Saving)  
+- Scikit-learn  
+- Streamlit  
+- Joblib  
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 
 ```
 healthcare_ai/
@@ -73,39 +78,28 @@ healthcare_ai/
 
 ---
 
-## 🚀 How to Run the Project
+## How to Run the Project
 
-### 1️⃣ Clone the Repository
+### Step 1: Clone the Repository
 
 ```
 git clone https://github.com/your-username/AIHCA.git
 cd AIHCA
 ```
 
----
-
-### 2️⃣ Install Dependencies
+### Step 2: Install Required Libraries
 
 ```
 pip install -r requirements.txt
 ```
 
----
-
-### 3️⃣ Train the Model
+### Step 3: Train the Model
 
 ```
 python train_model.py
 ```
 
-This will:
-- Load dataset  
-- Train TF-IDF + Random Forest model  
-- Save trained model inside the models folder  
-
----
-
-### 4️⃣ Run the Application
+### Step 4: Run the Application
 
 ```
 streamlit run app.py
@@ -115,53 +109,46 @@ The application will open in your browser.
 
 ---
 
-## 📊 Model Details
+## Model Information
 
-- Feature Extraction: TF-IDF Vectorizer  
-- Classifier: Random Forest (Multi-Class Classification)  
-- Evaluation Metrics:
-  - Accuracy  
-  - Precision  
-  - Recall  
-  - F1 Score  
+- Text Feature Extraction: TF-IDF  
+- Classification Algorithm: Random Forest  
+- Type: Multi-class classification  
+- Evaluation Metrics: Accuracy, Precision, Recall, F1 Score  
 
 ---
 
-## 🚨 Emergency Detection Logic
+## Emergency Handling
 
-The system overrides ML prediction if critical symptoms are detected such as:
+If the user enters critical symptoms such as:
 
 - Chest pain  
 - Breathlessness  
 - Unconsciousness  
 - Severe bleeding  
-- Stroke indicators  
 
-In such cases, it displays:
-
-**CRITICAL CONDITION – SEEK IMMEDIATE MEDICAL ATTENTION**
+The system will immediately display a warning message advising the user to seek medical help.
 
 ---
 
-## 🔮 Future Enhancements
+## Future Improvements
 
-- Multilingual Support  
-- AI-Based Image Diagnosis  
-- Voice Interaction  
-- Wearable Device Integration  
-- Personalized Health Tracking  
-
----
-
-## ⚠️ Disclaimer
-
-This system provides AI-generated preliminary health guidance and is not a substitute for professional medical diagnosis or treatment. Always consult a qualified healthcare provider for serious or persistent symptoms.
+- Multilingual support for regional languages  
+- Image-based diagnosis using deep learning  
+- Voice interaction support  
+- Integration with wearable health devices  
 
 ---
 
-## 👨‍💻 Author
+## Disclaimer
+
+This system is developed for academic and informational purposes only. It provides preliminary guidance and does not replace professional medical advice. Users are strongly advised to consult a qualified healthcare professional for proper diagnosis and treatment.
+
+---
+
+## Author
 
 Gorrang Arora  
 B.Tech Computer Science & Engineering  
 Manipal University Jaipur  
-Academic Year: 2025–2026  
+Academic Year: 2025–2026
