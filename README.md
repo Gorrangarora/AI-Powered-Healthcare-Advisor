@@ -1,4 +1,4 @@
-# AI-Powered Healthcare Advisor (AIHCA)
+# AI-Powered Healthcare Advisor (AIHCA) (http://10.174.6.249:8501)
 
 AIHCA is a machine learning-based healthcare assistance system that helps users understand possible diseases based on the symptoms they enter. The system provides preliminary guidance such as home remedies, natural suggestions, OTC medicine recommendations (without dosage), and alerts users in case of critical conditions.
 
